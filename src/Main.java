@@ -1,17 +1,29 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //BOSS
+        Boss boss = new Boss();
+        boss.setDamage(50);
+        boss.setHealth(700);
+        boss.getWeapon().setWeapon(WeaponType.BIO_WEAPON);
+        boss.getWeapon().setWeaponName("Эбола");
+        System.out.println("BOSS - " + boss.printInfo());
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        //SKELETON 1
+        Skeleton skeleton = new Skeleton();
+        skeleton.setHealth(100);
+        skeleton.setDamage(30);
+        skeleton.setSkeletonArrows(50);
+        skeleton.getWeapon().setWeapon(WeaponType.BOW);
+        skeleton.getWeapon().setWeaponName("Лук");
+        System.out.println("SKELETON_1 - " + skeleton.printInfo());
+
+        //SKELETON 2
+        skeleton.setHealth(110);
+        skeleton.setDamage(40);
+        skeleton.setSkeletonArrows(60);
+        skeleton.getWeapon().setWeapon(WeaponType.BOW_AND_SHIELD);
+        skeleton.getWeapon().setWeaponName("Лук и щит");
+        System.out.println("SKELETON_2  - " + skeleton.printInfo());
     }
 }
